@@ -1,0 +1,67 @@
+ul {
+  display: block;
+  width: 360px;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+  padding: 10px;
+  list-style-type: none;
+}
+button {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  background: #767676;
+  box-shadow: none;
+  border: 0;
+  border-radius: 40px;
+}
+button:active {
+  animation: blinkStd 0.5s;
+}
+button:focus {
+  outline: 0;
+}
+@keyframes blinkStd {
+  from {
+    background: darkgray;
+  }
+  to {
+    background: #767676;
+  }
+}
+button.operator {
+  background: orange;
+}
+button.operator:active {
+  animation: blinkOperator 0.5s;
+}
+@keyframes blinkOperator {
+  from {
+    background: #ffc966;
+  }
+  to {
+    background: orange;
+  }
+}
+button.operator-secondary {
+  background: lightgray;
+}
+button.operator-secondary:active {
+  animation: blinkOperatorSecond 0.5s;
+}
+@keyframes blinkOperatorSecond {
+  from {
+    background: #ffffff;
+  }
+  to {
+    background: lightgray;
+  }
+}
