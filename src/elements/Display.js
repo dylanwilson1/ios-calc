@@ -8,7 +8,6 @@ class Display extends React.Component {
         return (
             <div id='display'>
                 {x<=14 ? x : x.slice(0,14)}
-                {/* {x} */}
             </div>
         )
     }

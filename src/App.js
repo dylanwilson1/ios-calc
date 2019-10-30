@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Display from './elements/Display'
-import Buttons from './elements/Buttons'
+import Display from './elements/Display';
+import Buttons from './elements/Buttons';
 
+import RegisterKeypresses from './logic/keypresses';
 import handleInputData from './logic/handleInputData';
-import calculate from './logic/calculate'
+import calculate from './logic/calculate';
 
 import './App.css';
-
 
 class App extends React.Component {
   constructor() {
@@ -16,6 +16,7 @@ class App extends React.Component {
       display: '',
       data: []
     }
+    RegisterKeypresses(this);
   }
 
   handleInput(input, inputType) {
@@ -34,7 +35,6 @@ class App extends React.Component {
   }
 
   clear() {
-    // displaying = '';
     this.setState({
       display: '',
       data: []

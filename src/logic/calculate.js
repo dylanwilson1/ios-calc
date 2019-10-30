@@ -16,11 +16,9 @@ function operate(a, b, operator) {
     }
 }
 
-
 function calculate(inputArray) {
-
     let calcArray = inputArray.map(element => element.value)
-    console.log(calcArray)
+    // console.log(calcArray)
 
     const bidmasOperators=['÷','x','+','-'];
     let i;
@@ -28,8 +26,6 @@ function calculate(inputArray) {
     for (let op = 0; op < 4; op++) {
         i = 0;
         while (i < calcArray.length) {
-            
-
             if (calcArray[i] === bidmasOperators[op]) {
                 if (op===0 && calcArray[i+1]==='0'){
                     return 'Divide Zero Error'
@@ -41,10 +37,8 @@ function calculate(inputArray) {
                 i++;
             }
         }
-        console.log(calcArray)
+        // console.log(calcArray)
     }
-
-    // console.log(calcArray[0])
     return String(calcArray[0]).slice(0, 14)
 }
 

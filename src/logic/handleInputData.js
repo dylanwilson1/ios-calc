@@ -1,30 +1,28 @@
 function Item(value, type) {
     this.value = value;
-    this.type = type;    //operator or operand ////could be changed to boolean
+    this.type = type;    //operator or operand ////Could be changed to boolean
 }
 
 
-
-
-//this lot needs to be refactored
+//This needs to be refactored
 function handleInputData(data, inputValue, inputValueType) {
-    console.log('data so far is')
-    console.log(data)
-    console.log('data added is '+inputValue+' it is a '+inputValueType)
+    // console.log('data so far is')
+    // console.log(data)
+    // console.log('data added is ' + inputValue + ' it is a ' + inputValueType)
     if (data.length >= 1 && data.length <= 18) {
         if (data[data.length - 1].type === 'operand' && inputValueType === 'operand') {
 
-            if (inputValue === '.' && data[data.length - 1].value.indexOf('.') >= 0) { } //if already has a dot dont allow another
+            if (inputValue === '.' && data[data.length - 1].value.indexOf('.') >= 0) { } //If already has a dot, don't allow another
             else {
                 if (inputValue === '+/-') {
-                    console.log('inversing sign')
-                    console.log(data[data.length-1])
-                    data[data.length-1].value=data[data.length-1].value/-1;
+                    // console.log('inversing sign')
+                    // console.log(data[data.length - 1])
+                    data[data.length - 1].value = data[data.length - 1].value / -1;
 
                 }
-                else if (inputValue === '%'){
-                    if (data.length>=3){
-                    data[data.length-1].value=(data[data.length-3].value/100)*data[data.length-1].value
+                else if (inputValue === '%') {
+                    if (data.length >= 3) {
+                        data[data.length - 1].value = (data[data.length - 3].value / 100) * data[data.length - 1].value
                     }
                 }
                 else {
@@ -37,8 +35,8 @@ function handleInputData(data, inputValue, inputValueType) {
             data.push(new Item(inputValue, inputValueType))
         }
     }
-    ///first char
-    else if (inputValueType === 'operand' && inputValue!=='+/-') {
+    //First char
+    else if (inputValueType === 'operand' && inputValue !== '+/-') {
         data.push(new Item(inputValue, inputValueType))
     }
 
