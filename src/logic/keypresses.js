@@ -20,7 +20,7 @@ function RegisterKeypresses(App) {
                 App.handleInput('÷', 'operator')
                 break;
             case (e.keyCode === 110 || e.keyCode === 190):
-                App.handleInput('.', 'operator')
+                App.handleInput('.', 'operand')
                 break;
             case (e.keyCode === 13 || e.keyCode === 187):
                 App.calculate()

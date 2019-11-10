@@ -21,6 +21,9 @@ class App extends React.Component {
 
   handleInput(input, inputType) {
     let currentData = this.state.data;
+    // console.log('currentData is ',currentData);
+    // console.log('input is ',input)
+    // console.log('the type of that is ',inputType)
 
     let x = handleInputData(currentData, input, inputType)
     // console.log(x)
